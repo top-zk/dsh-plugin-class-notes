@@ -6,9 +6,20 @@
 
 ## 装在哪
 
+源码仓库：<https://github.com/top-zk/dsh-plugin-class-notes>
+
+```powershell
+git clone https://github.com/top-zk/dsh-plugin-class-notes.git
+```
+
+clone 下来的目录名就是 `dsh-plugin-class-notes`，可以直接拿去挂 junction。
+
 插件源码在工作区 `dsh-plugin-class-notes/`，通过 junction 挂在
 `%USERPROFILE%\.dsh\profiles\desktop\node_modules\dsh-plugin-class-notes`，
 并写进了该 profile `package.json` 的 `dsh.profile.bundles`。
+
+仓库里只有源码和测试课件；听课数据（课件原件、`session.json`、导出的笔记）默认写在
+`%USERPROFILE%\.dsh\storages\class-notes\<id>\`，不进仓库（`.gitignore` 已挡）。
 
 改完代码要让宿主半重新加载：设置 → 插件里把 `class-notes` 关一次再开，
 或者重启 DSH。浏览器半改完要刷新页面。
