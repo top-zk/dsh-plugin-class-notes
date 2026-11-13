@@ -1,0 +1,7 @@
+# The class-notes bundle patch: one loader row for the host half.
+#
+# The browser half needs no second row: the client module system discovers it
+# from this package's `dsh.client` declaration.
+- insert:
+    - id: class-notes
+      name: 'dsh-plugin-class-notes'

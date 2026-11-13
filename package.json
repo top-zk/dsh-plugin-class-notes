@@ -1,0 +1,36 @@
+{
+    "name":  "dsh-plugin-class-notes",
+    "version":  "0.1.0",
+    "private":  true,
+    "description":  "听课笔记：放 PPT 或 PDF 自动识别每页关键词，录音按关键词切页，把讲的内容写进每页备注",
+    "type":  "module",
+    "main":  "lib/index.js",
+    "exports":  {
+                    ".":  "./lib/index.js",
+                    "./client":  "./lib/client.js",
+                    "./package.json":  "./package.json"
+                },
+    "dsh":  {
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           },
+                "client":  {
+                               "platform":  "web",
+                               "inject":  [
+                                              "@deepseek-ai/dsh-api-remotes",
+                                              "@deepseek-ai/dsh-client-ui-renderer",
+                                              "@deepseek-ai/dsh-client-ui-layout",
+                                              "@deepseek-ai/dsh-client-ui-sidebar"
+                                          ]
+                           }
+            },
+    "files":  [
+                  "lib/**/*.js",
+                  "python/*.py",
+                  "python/vendor/**",
+                  "scripts/*.py",
+                  "cordis.patch.yml",
+                  "README.md"
+              ],
+    "license":  "MIT"
+}

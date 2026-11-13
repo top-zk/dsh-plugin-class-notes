@@ -1,0 +1,21 @@
+# 本机听课数据：默认在 %USERPROFILE%\.dsh\storages\class-notes，
+# 包含课件原件与课堂录音整理结果，属于个人资料，永远不要进仓库。
+storages/
+class-notes/
+*.session.json
+
+# 跑测试生成的产物
+test/out/
+render/
+*.log
+
+# Python 缓存（python/vendor 下的 pypdf 也会带 __pycache__）
+__pycache__/
+*.py[cod]
+
+# 编辑器与系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
